@@ -11,15 +11,17 @@
 
 <body>
     <div id="app">
-        <h1>{{message}}</h1>
-        <input v-model="message" type="text">
+        <p>123</p>
     </div>
-    <script>
+    <script id="tpl" type="x-template">
+        <div class="tpl">
+            <p>This is a tpl from script tag</p>
+        </div>
+    </script>
+    <script type="text/javascript">
         var vm = new Vue({
             el: "#app",
-            data: {
-                message: "Hello World ,I am Vue.js"
-            }
+            template: "#tpl"
         })
     </script>
 </body>
